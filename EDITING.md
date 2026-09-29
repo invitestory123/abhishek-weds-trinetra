@@ -1,0 +1,45 @@
+# Editing Guide — Abhishek & Trinetra Wedding Reception
+
+Customer customization guide for `abhishek-weds-trinetra` (Bengali wedding invitation featuring cinematic curtain reveal video, authentic Bengali couple portraits, Kudmayi soundtrack, scratch-to-reveal card, and Google Maps integration).
+
+## Primary Customer Data
+
+All text, dates, events, venue, and images live in:
+- `editable/wedding-data.js`
+
+### Current Configuration:
+- **Couple Details**:
+  - `couple.groom`: `"Abhishek"` (Son of Biswa Deb Mukherjee)
+  - `couple.bride`: `"Trinetra"` (Daughter of Tapas Kumar Barman)
+  - `couple.openingDate`: `"13 · December · 2026"`
+  - `couple.heroDate`: `"13 · 12 · 2026"`
+- **Countdown**:
+  - `countdown.targetISO`: `"2026-12-13T18:30:00+05:30"`
+- **Scratch-to-reveal Save the Date Card**:
+  - `scratchCard.day`: `"Sunday"`
+  - `scratchCard.date`: `"13"`
+  - `scratchCard.monthYear`: `"December · 2026"`
+  - `scratchCard.city`: `"Asansol"`
+- **Events**:
+  - `events[]`: Wedding Reception (`13 Dec 2026`, `6:30 PM onwards`, `Railway Officers Colony, Asansol`)
+- **Venue**:
+  - `venue.name`: `"Railway Officers Colony"`
+  - `venue.addressLine1`: `"Domohani Railway Colony"`
+  - `venue.addressLine2`: `"Asansol, West Bengal 713303"`
+  - `venue.cityTag`: `"Touch to explore · Asansol, West Bengal"`
+  - `venue.mapsUrl`: `"https://maps.app.goo.gl/pTetwGBT4AHWF9W39"`
+- **Music**:
+  - Track: `Kudmayi ke din Aagaye` (`editable/assets/kudmayi.mp3`)
+- **Assets**:
+  - `assets.video`: Opening curtain reveal with Kudmayi soundtrack (`editable/assets/sm.mp4`)
+  - `assets.flowFrame`: Poster frame image (`editable/assets/flow-first-frame.webp`)
+  - `assets.heroArt`: Bengali wedding couple illustration (`editable/assets/abhishek-trinetra-hero.webp`)
+  - `assets.storyPhoto`: Bengali couple portrait (`editable/assets/abhishek-trinetra-story.webp`)
+  - `assets.ogImage`: Social preview card (`editable/assets/abhishek-trinetra-og.jpg`)
+
+## Testing
+
+```bash
+node --check editable/wedding-data.js
+```
+Open `http://localhost:9022/` in browser.
