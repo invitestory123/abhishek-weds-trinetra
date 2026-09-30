@@ -37,6 +37,7 @@ All text, dates, events, venue, and images live in:
   - `venue.mapsUrl`: `"https://maps.app.goo.gl/pTetwGBT4AHWF9W39"`
 - **Music**:
   - Track: `Tenu Leke Main Jawanga` (`editable/assets/tenu-leke.mp3`)
+  - Start Time: `20` (0:20 build-up)
 - **Assets**:
   - `assets.video`: Opening curtain reveal (`editable/assets/sm.mp4`)
   - `assets.flowFrame`: Poster frame image (`editable/assets/flow-first-frame.webp`)

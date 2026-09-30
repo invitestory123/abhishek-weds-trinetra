@@ -169,16 +169,36 @@
           }
         }
 
+        let initialSeekDone = false;
+
         window.startBgMusic = function() {
+          const targetStartTime = (window.WEDDING_DATA && window.WEDDING_DATA.music && typeof window.WEDDING_DATA.music.startTime === 'number')
+            ? window.WEDDING_DATA.music.startTime
+            : 20.0;
+
           if (!isStarted) {
             isStarted = true;
-            // Start from 50s build-up leading into chorus "Tenu leke main jawanga"
-            if (audio.currentTime < 10) {
-              audio.currentTime = 50.0;
-            }
+            // Start from 0:20 (20s)
+            try {
+              audio.currentTime = targetStartTime;
+              if (Math.abs(audio.currentTime - targetStartTime) < 1.0) {
+                initialSeekDone = true;
+              }
+            } catch (e) {}
+
+            audio.addEventListener('loadedmetadata', function() {
+              if (!initialSeekDone) {
+                audio.currentTime = targetStartTime;
+                initialSeekDone = true;
+              }
+            }, { once: true });
           }
           audio.muted = false;
           audio.play().then(() => {
+            if (!initialSeekDone && audio.currentTime < targetStartTime - 0.5) {
+              audio.currentTime = targetStartTime;
+              initialSeekDone = true;
+            }
             toggleBtn.style.display = 'flex';
             toggleBtn.classList.add('is-playing');
           }).catch((err) => {
