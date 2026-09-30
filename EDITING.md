@@ -1,6 +1,6 @@
-# Editing Guide — Abhishek & Trinetra Wedding Reception
+# Editing Guide — Dr Abhishek & Dr Trinetra Wedding Reception
 
-Customer customization guide for `abhishek-weds-trinetra` (Bengali wedding invitation featuring cinematic curtain reveal video, authentic Bengali couple portraits, Kudmayi soundtrack, scratch-to-reveal card, and Google Maps integration).
+Customer customization guide for `abhishek-weds-trinetra` (Bengali wedding invitation featuring cinematic curtain reveal video, authentic Bengali couple portraits, "Tenu Leke Main Jawanga" soundtrack, scratch-to-reveal card, and Google Maps integration).
 
 ## Primary Customer Data
 
@@ -9,8 +9,8 @@ All text, dates, events, venue, and images live in:
 
 ### Current Configuration:
 - **Couple Details**:
-  - `couple.groom`: `"Abhishek"` (Son of Biswa Deb Mukherjee)
-  - `couple.bride`: `"Trinetra"` (Daughter of Tapas Kumar Barman)
+  - `couple.groom`: `"Dr Abhishek"` (Son of Mr Biswa Deb Mukherjee & Mrs Mitu Mukherjee)
+  - `couple.bride`: `"Dr Trinetra"` (Daughter of Dr Tapas Kumar Barman and Dr Bijita Barman)
   - `couple.openingDate`: `"13 · December · 2026"`
   - `couple.heroDate`: `"13 · 12 · 2026"`
 - **Countdown**:
@@ -29,9 +29,9 @@ All text, dates, events, venue, and images live in:
   - `venue.cityTag`: `"Touch to explore · Asansol, West Bengal"`
   - `venue.mapsUrl`: `"https://maps.app.goo.gl/pTetwGBT4AHWF9W39"`
 - **Music**:
-  - Track: `Kudmayi ke din Aagaye` (`editable/assets/kudmayi.mp3`)
+  - Track: `Tenu Leke Main Jawanga` (`editable/assets/tenu-leke.mp3`)
 - **Assets**:
-  - `assets.video`: Opening curtain reveal with Kudmayi soundtrack (`editable/assets/sm.mp4`)
+  - `assets.video`: Opening curtain reveal (`editable/assets/sm.mp4`)
   - `assets.flowFrame`: Poster frame image (`editable/assets/flow-first-frame.webp`)
   - `assets.heroArt`: Bengali wedding couple illustration (`editable/assets/abhishek-trinetra-hero.webp`)
   - `assets.storyPhoto`: Bengali couple portrait (`editable/assets/abhishek-trinetra-story.webp`)
@@ -42,4 +42,4 @@ All text, dates, events, venue, and images live in:
 ```bash
 node --check editable/wedding-data.js
 ```
-Open `http://localhost:9022/` in browser.
+Open in local browser.

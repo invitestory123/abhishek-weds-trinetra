@@ -1,14 +1,14 @@
 // =============================================================================
 // BENGALI WEDDING INVITATION — WEDDING DATA CONFIGURATION
-// Abhishek & Trinetra · 13 December 2026 · Asansol, West Bengal
+// Dr Abhishek & Dr Trinetra · 13 December 2026 · Asansol, West Bengal
 // =============================================================================
 
 window.WEDDING_DATA = {
   couple: {
-    groom: "Abhishek",
-    bride: "Trinetra",
-    groomSubtitle: "Son of Biswa Deb Mukherjee",
-    brideSubtitle: "Daughter of Tapas Kumar Barman",
+    groom: "Dr Abhishek",
+    bride: "Dr Trinetra",
+    groomSubtitle: "Son of Mr Biswa Deb Mukherjee & Mrs Mitu Mukherjee",
+    brideSubtitle: "Daughter of Dr Tapas Kumar Barman and Dr Bijita Barman",
     openingDate: "13 · December · 2026",
     heroDate: "13 · 12 · 2026"
   },
@@ -25,7 +25,8 @@ window.WEDDING_DATA = {
   },
 
   story: {
-    portraitCaption: ["Two souls, one sacred bond", "united forever in love"]
+    portraitCaption: ["Two souls, one sacred bond", "united forever in love"],
+    blessings: "With the divine blessings of Mr Biswa Deb Mukherjee & Mrs Mitu Mukherjee, Dr Tapas Kumar Barman & Dr Bijita Barman, and our loving families, we warmly invite you to celebrate our Wedding Reception in Asansol as two souls unite for a lifetime of love and togetherness."
   },
 
   events: [
@@ -48,9 +49,9 @@ window.WEDDING_DATA = {
   },
 
   music: {
-    title: "Kudmayi",
-    artist: "Shahid Mallya, Pritam · Rocky Aur Rani Kii Prem Kahaani",
-    track: "./editable/assets/kudmayi.mp3"
+    title: "Tenu Leke Main Jawanga",
+    artist: "Sonu Nigam, Mahalakshmi Iyer · Salaam-E-Ishq",
+    track: "./editable/assets/tenu-leke.mp3"
   },
 
   assets: {

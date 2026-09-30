@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#304416" />
-    <meta name="description" content="Join Abhishek (Son of Biswa Deb Mukherjee) &amp; Trinetra (Daughter of Tapas Kumar Barman) as they celebrate their Wedding Reception on 13 December 2026 in Asansol, West Bengal." />
-    <meta property="og:title" content="Abhishek &amp; Trinetra | 13 December 2026" />
+    <meta name="description" content="Join Dr Abhishek (Son of Mr Biswa Deb Mukherjee &amp; Mrs Mitu Mukherjee) &amp; Dr Trinetra (Daughter of Dr Tapas Kumar Barman and Dr Bijita Barman) as they celebrate their Wedding Reception on 13 December 2026 in Asansol, West Bengal." />
+    <meta property="og:title" content="Dr Abhishek &amp; Dr Trinetra | 13 December 2026" />
     <meta property="og:description" content="With joyful hearts, we warmly invite you to our Wedding Reception at Railway Officers Colony, Asansol, West Bengal." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="editable/assets/abhishek-trinetra-og.jpg" />
@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preload" as="image" href="editable/assets/abhishek-trinetra-hero.webp" type="image/webp" fetchpriority="high" />
     <link rel="preload" as="video" href="editable/assets/sm.mp4" type="video/mp4" />
-    <title>Abhishek &amp; Trinetra | Wedding Reception</title>
+    <title>Dr Abhishek &amp; Dr Trinetra | Wedding Reception</title>
     <script src="./editable/wedding-data.js"></script>
     <script type="module" crossorigin src="assets/index-DLpsKpIv.js"></script>
     <link rel="stylesheet" crossorigin href="assets/index-Fwiizu_u.css">
@@ -56,9 +56,9 @@
   <body>
     <div id="root"></div>
 
-    <!-- Background Music Audio & Toggle for Kudmayi ke din Aagaye -->
+    <!-- Background Music Audio & Toggle for Tenu Leke Main Jawanga -->
     <audio id="bg-audio" loop preload="auto">
-      <source src="./editable/assets/kudmayi.mp3" type="audio/mpeg">
+      <source src="./editable/assets/tenu-leke.mp3" type="audio/mpeg">
     </audio>
     <button id="music-toggle" class="bg-music-toggle" aria-label="Toggle background music" style="display: none;">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -74,12 +74,21 @@
         const toggleBtn = document.getElementById('music-toggle');
         let isStarted = false;
 
+        // Sync with WEDDING_DATA music track if specified
+        if (window.WEDDING_DATA && window.WEDDING_DATA.music && window.WEDDING_DATA.music.track) {
+          const srcTag = audio.querySelector('source');
+          if (srcTag && srcTag.getAttribute('src') !== window.WEDDING_DATA.music.track) {
+            srcTag.src = window.WEDDING_DATA.music.track;
+            audio.load();
+          }
+        }
+
         function startBgMusic() {
           if (!isStarted) {
             isStarted = true;
-            // Start from iconic verse 74s (Teri kudmayi ke din aa gaye)
+            // Start from 50s build-up leading into chorus "Tenu leke main jawanga"
             if (audio.currentTime < 10) {
-              audio.currentTime = 74.0;
+              audio.currentTime = 50.0;
             }
             audio.play().then(() => {
               toggleBtn.style.display = 'flex';
