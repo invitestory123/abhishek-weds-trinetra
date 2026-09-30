@@ -14,7 +14,7 @@ window.WEDDING_DATA = {
   },
 
   countdown: {
-    targetISO: "2026-12-13T18:30:00+05:30"
+    targetISO: "2026-12-13T19:30:00+05:30"
   },
 
   scratchCard: {
@@ -25,26 +25,34 @@ window.WEDDING_DATA = {
   },
 
   story: {
-    portraitCaption: ["Two souls, one sacred bond", "united forever in love"],
-    blessings: "With the divine blessings of Mr Biswa Deb Mukherjee & Mrs Mitu Mukherjee, Dr Tapas Kumar Barman & Dr Bijita Barman, and our loving families, we warmly invite you to celebrate our Wedding Reception in Asansol as two souls unite for a lifetime of love and togetherness."
+    title: "Two paths, one beautiful promise",
+    quote: "The best things in life are better shared with the people we love most.",
+    message: "Mr. and Mrs. Mukherjee request the honor of your presence at the wedding reception celebrating the marriage of their children, Abhishek and Trinetra on Sunday, 13th December 2026.",
+    milestones: [
+      { label: "We Met", date: "9th March 2023" },
+      { label: "Engagement", date: "27th October 2024" },
+      { label: "Finally Tying Knots", date: "11th December 2026" }
+    ],
+    blessings: "With the divine blessings of Mr Biswa Deb Mukherjee & Mrs Mitu Mukherjee, Dr Tapas Kumar Barman & Dr Bijita Barman, and our loving families, we warmly invite you to celebrate our Wedding Reception in Asansol as two souls unite for a lifetime of love and togetherness.",
+    portraitCaption: ["Two souls, one sacred bond", "united forever in love"]
   },
 
   events: [
     {
       name: "Wedding Reception",
       date: "13 Dec 2026",
-      time: "6:30 PM onwards",
-      place: "Railway Officers Colony, Asansol",
+      time: "7:30 PM onwards",
+      place: "Railway Officers Club, Asansol",
       mark: "reception"
     }
   ],
 
   venue: {
-    name: "Railway Officers Colony",
+    name: "Railway Officers Club",
     addressLine1: "Domohani Railway Colony",
-    addressLine2: "Asansol, West Bengal 713303",
+    addressLine2: "Asansol, West Bengal - 713303",
     cityTag: "Touch to explore · Asansol, West Bengal",
-    mapQuery: "Railway Officers Colony Domohani Railway Colony Asansol West Bengal 713303",
+    mapQuery: "Railway Officers Club Domohani Railway Colony Asansol West Bengal 713303",
     mapsUrl: "https://maps.app.goo.gl/pTetwGBT4AHWF9W39"
   },
 
