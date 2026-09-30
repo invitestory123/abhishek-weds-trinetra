@@ -74,8 +74,7 @@
         const toggleBtn = document.getElementById('music-toggle');
         let isStarted = false;
 
-        // Mute audio by default during opening animation
-        audio.muted = true;
+        audio.muted = false;
 
         // Sync with WEDDING_DATA music track if specified
         if (window.WEDDING_DATA && window.WEDDING_DATA.music && window.WEDDING_DATA.music.track) {
@@ -86,7 +85,7 @@
           }
         }
 
-        function playBgMusic() {
+        window.startBgMusic = function() {
           if (!isStarted) {
             isStarted = true;
             // Start from 50s build-up leading into chorus "Tenu leke main jawanga"
@@ -98,58 +97,19 @@
           audio.play().then(() => {
             toggleBtn.style.display = 'flex';
             toggleBtn.classList.add('is-playing');
-          }).catch(() => {
-            // Autoplay policy deferral
+          }).catch((err) => {
+            console.log('Audio playback status:', err);
           });
-        }
+        };
 
-        function isOpeningActive() {
-          return !!document.querySelector('.opening');
-        }
+        // Start bg song after tapping "Tap to open" or user interaction
+        document.addEventListener('pointerdown', function() {
+          window.startBgMusic();
+        }, { passive: true });
 
-        function watchOpeningEnd() {
-          const opening = document.querySelector('.opening');
-          if (!opening) {
-            playBgMusic();
-            return;
-          }
-
-          const video = opening.querySelector('video');
-          if (video) {
-            video.addEventListener('ended', function() {
-              playBgMusic();
-            }, { once: true });
-          }
-
-          const observer = new MutationObserver(function() {
-            if (!document.querySelector('.opening')) {
-              playBgMusic();
-              observer.disconnect();
-            }
-          });
-          observer.observe(document.body, { childList: true, subtree: true });
-        }
-
-        function handleUserInteraction() {
-          if (isOpeningActive()) {
-            // Keep muted during opening animation; prime playback within gesture
-            if (audio.paused && !isStarted) {
-              audio.muted = true;
-              audio.play().catch(() => {});
-            }
-            watchOpeningEnd();
-          } else {
-            playBgMusic();
-          }
-        }
-
-        document.addEventListener('pointerdown', handleUserInteraction, { passive: true });
-
-        window.addEventListener('load', function() {
-          if (isOpeningActive()) {
-            watchOpeningEnd();
-          }
-        });
+        document.addEventListener('click', function() {
+          window.startBgMusic();
+        }, { passive: true });
 
         toggleBtn.addEventListener('click', function(e) {
           e.stopPropagation();
