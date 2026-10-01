@@ -174,11 +174,11 @@
         window.startBgMusic = function() {
           const targetStartTime = (window.WEDDING_DATA && window.WEDDING_DATA.music && typeof window.WEDDING_DATA.music.startTime === 'number')
             ? window.WEDDING_DATA.music.startTime
-            : 37.0;
+            : 30.0;
 
           if (!isStarted) {
             isStarted = true;
-            // Start from 0:37 (37s)
+            // Start from 0:30 (30s)
             try {
               audio.currentTime = targetStartTime;
               if (Math.abs(audio.currentTime - targetStartTime) < 1.0) {
