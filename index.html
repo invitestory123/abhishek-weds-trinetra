@@ -174,28 +174,31 @@
         window.startBgMusic = function() {
           const targetStartTime = (window.WEDDING_DATA && window.WEDDING_DATA.music && typeof window.WEDDING_DATA.music.startTime === 'number')
             ? window.WEDDING_DATA.music.startTime
-            : 30.0;
+            : 0;
 
           if (!isStarted) {
             isStarted = true;
-            // Start from 0:30 (30s)
-            try {
-              audio.currentTime = targetStartTime;
-              if (Math.abs(audio.currentTime - targetStartTime) < 1.0) {
-                initialSeekDone = true;
-              }
-            } catch (e) {}
-
-            audio.addEventListener('loadedmetadata', function() {
-              if (!initialSeekDone) {
+            if (targetStartTime > 0) {
+              try {
                 audio.currentTime = targetStartTime;
-                initialSeekDone = true;
-              }
-            }, { once: true });
+                if (Math.abs(audio.currentTime - targetStartTime) < 1.0) {
+                  initialSeekDone = true;
+                }
+              } catch (e) {}
+
+              audio.addEventListener('loadedmetadata', function() {
+                if (!initialSeekDone) {
+                  audio.currentTime = targetStartTime;
+                  initialSeekDone = true;
+                }
+              }, { once: true });
+            } else {
+              initialSeekDone = true;
+            }
           }
           audio.muted = false;
           audio.play().then(() => {
-            if (!initialSeekDone && audio.currentTime < targetStartTime - 0.5) {
+            if (targetStartTime > 0 && !initialSeekDone && audio.currentTime < targetStartTime - 0.5) {
               audio.currentTime = targetStartTime;
               initialSeekDone = true;
             }

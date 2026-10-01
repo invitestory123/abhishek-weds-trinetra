@@ -60,7 +60,7 @@ window.WEDDING_DATA = {
     title: "Tenu Leke Main Jawanga",
     artist: "Sonu Nigam, Mahalakshmi Iyer · Salaam-E-Ishq",
     track: "./editable/assets/tenu-leke.mp3",
-    startTime: 30
+    startTime: 0
   },
 
   assets: {
