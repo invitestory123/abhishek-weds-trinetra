@@ -52,6 +52,51 @@
         to { transform: rotate(360deg); }
       }
 
+      /* Hero Introduction & Couple Names Differentiation */
+      .hero__copy .eyebrow {
+        color: #263810 !important; /* Deep forest ink with crisp definition */
+        font-weight: 700 !important;
+        letter-spacing: 0.28em !important;
+        text-shadow: 0 1px 8px rgba(255, 255, 255, 0.8), 0 0 1px rgba(0, 0, 0, 0.2) !important;
+        margin-bottom: 8px !important;
+      }
+      .hero h1 span {
+        color: #ffffff !important;
+        text-shadow: 0 2px 14px rgba(22, 34, 10, 0.8), 0 1px 3px rgba(22, 34, 10, 0.95), 0 0 24px rgba(0, 0, 0, 0.4) !important;
+      }
+      .hero h1 i {
+        color: #d19426 !important; /* Rich amber gold */
+        text-shadow: 0 2px 10px rgba(22, 34, 10, 0.5) !important;
+      }
+      .hero .date-rule {
+        color: #2b3b13 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.25em !important;
+        text-shadow: 0 1px 6px rgba(255, 255, 255, 0.75) !important;
+      }
+      .hero .date-rule b {
+        background: #a9771e !important;
+        height: 1.5px !important;
+      }
+      .hero__note {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 18px !important;
+        line-height: 1.55 !important;
+        font-weight: 600 !important;
+        color: #72122c !important; /* Auspicious deep royal Bengali crimson — sharp contrast on yellow background & differentiated from white names */
+        text-shadow: 0 1px 8px rgba(255, 255, 255, 0.75) !important;
+        max-width: 480px;
+        margin: 14px auto 0 !important;
+        padding: 8px 18px !important;
+        background: rgba(255, 252, 242, 0.65) !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        border: 1px solid rgba(216, 154, 43, 0.4) !important;
+        border-radius: 14px !important;
+        box-shadow: 0 4px 18px rgba(30, 45, 12, 0.08) !important;
+        display: inline-block !important;
+      }
+
       /* Story quote, message, and milestone timeline */
       .story__quote {
         font-family: 'Cormorant Garamond', Georgia, serif;
@@ -140,9 +185,9 @@
   <body>
     <div id="root"></div>
 
-    <!-- Background Music Audio & Toggle for Tenu Leke Main Jawanga -->
+    <!-- Background Music Audio & Toggle for Rote Gachey Khobor (Sarva Mangala) -->
     <audio id="bg-audio" loop preload="auto">
-      <source src="./editable/assets/tenu-leke.mp3" type="audio/mpeg">
+      <source src="./editable/assets/rote-gachey-khobor.mp3" type="audio/mpeg">
     </audio>
     <button id="music-toggle" class="bg-music-toggle" aria-label="Toggle background music" style="display: none;">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

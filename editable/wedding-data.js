@@ -57,9 +57,9 @@ window.WEDDING_DATA = {
   },
 
   music: {
-    title: "Tenu Leke Main Jawanga",
-    artist: "Sonu Nigam, Mahalakshmi Iyer · Salaam-E-Ishq",
-    track: "./editable/assets/tenu-leke.mp3",
+    title: "Rote Gachey Khobor (Sarva Mangala)",
+    artist: "Rupak Tiary · Bengali Wedding Song",
+    track: "./editable/assets/rote-gachey-khobor.mp3",
     startTime: 0
   },
 

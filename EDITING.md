@@ -1,6 +1,6 @@
 # Editing Guide — Dr Abhishek & Dr Trinetra Wedding Reception
 
-Customer customization guide for `abhishek-weds-trinetra` (Bengali wedding invitation featuring cinematic curtain reveal video, authentic Bengali couple portraits, "Tenu Leke Main Jawanga" soundtrack, love story milestones timeline, scratch-to-reveal card, and Google Maps integration).
+Customer customization guide for `abhishek-weds-trinetra` (Bengali wedding invitation featuring cinematic curtain reveal video, authentic Bengali couple portraits, "Rote Gachey Khobor (Sarva Mangala)" soundtrack from 1:14, love story milestones timeline, scratch-to-reveal card, and Google Maps integration).
 
 ## Primary Customer Data
 
@@ -36,8 +36,8 @@ All text, dates, events, venue, and images live in:
   - `venue.cityTag`: `"Touch to explore · Asansol, West Bengal"`
   - `venue.mapsUrl`: `"https://maps.app.goo.gl/pTetwGBT4AHWF9W39"`
 - **Music**:
-  - Track: `Tenu Leke Main Jawanga` (`editable/assets/tenu-leke.mp3` — trimmed from 0:30 build-up)
-  - Start Time: `0` (immediate playback)
+  - Track: `Rote Gachey Khobor (Sarva Mangala)` (`editable/assets/rote-gachey-khobor.mp3` — trimmed from 1:14 timestamp)
+  - Start Time: `0` (immediate playback from 1:14)
 - **Assets**:
   - `assets.video`: Opening curtain reveal (`editable/assets/sm.mp4`)
   - `assets.flowFrame`: Poster frame image (`editable/assets/flow-first-frame.webp`)
