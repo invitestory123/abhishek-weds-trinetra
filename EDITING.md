@@ -1,4 +1,4 @@
-# Editing Guide — Dr Abhishek & Dr Trinetra Wedding Reception
+# Editing Guide — Dr. Abhishek & Dr. Trinetra Wedding Reception
 
 Customer customization guide for `abhishek-weds-trinetra` (Bengali wedding invitation featuring cinematic curtain reveal video, authentic Bengali couple portraits, "Rote Gachey Khobor (Sarva Mangala)" soundtrack from 1:14, love story milestones timeline, scratch-to-reveal card, and Google Maps integration).
 
@@ -9,8 +9,8 @@ All text, dates, events, venue, and images live in:
 
 ### Current Configuration:
 - **Couple Details**:
-  - `couple.groom`: `"Dr Abhishek"` (Son of Mr Biswa Deb Mukherjee & Mrs Mitu Mukherjee)
-  - `couple.bride`: `"Dr Trinetra"` (Daughter of Dr Tapas Kumar Barman and Dr Bijita Barman)
+  - `couple.groom`: `"Dr. Abhishek"` (Son of Mr. Biswa Deb Mukherjee & Mrs. Mitu Mukherjee)
+  - `couple.bride`: `"Dr. Trinetra"` (Daughter of Dr. Tapas Kumar Barman and Dr. Bijita Barman)
   - `couple.openingDate`: `"13 · December · 2026"`
   - `couple.heroDate`: `"13 · 12 · 2026"`
 - **Countdown**:
