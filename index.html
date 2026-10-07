@@ -117,6 +117,23 @@
         }
       }
 
+      /* Bold the wedding-day number "13" wherever it appears */
+      .b13 {
+        font-weight: 700;
+      }
+      /* Keep the bold "13" native inside blocks that style their own spans
+         (longhand overrides only — a `font` shorthand would swallow the weight) */
+      .event span.b13,
+      .scratch-card__date span.b13 {
+        font-style: normal;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+        letter-spacing: inherit;
+        font-weight: 700;
+      }
+
       /* Story quote, message, and milestone timeline */
       .story__quote {
         font-family: 'Cormorant Garamond', Georgia, serif;
