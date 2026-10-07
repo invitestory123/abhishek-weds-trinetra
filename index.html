@@ -97,6 +97,26 @@
         display: inline-block !important;
       }
 
+      /* Keep the invitation panel clear of the couple's faces:
+         the hero artwork scales with the viewport, so the offset is derived
+         from viewport height/width to land just below the portrait.
+         The second term caps it so the panel never reaches the bottom dock.
+         First pass uses vh (fallback), second upgrades to dvh where supported. */
+      .hero__note {
+        margin-top: max(14px, min(calc(41.2vh - 197px), calc(78vh - 413px))) !important;
+      }
+      .hero__note {
+        margin-top: max(14px, min(calc(41.2dvh - 197px), calc(78dvh - 413px))) !important;
+      }
+      @media (min-width: 700px) {
+        .hero__note {
+          margin-top: max(14px, min(calc(33vh + min(19.02vw, 209px) - 227px), calc(82vh - 415px))) !important;
+        }
+        .hero__note {
+          margin-top: max(14px, min(calc(33dvh + min(19.02vw, 209px) - 227px), calc(82dvh - 415px))) !important;
+        }
+      }
+
       /* Story quote, message, and milestone timeline */
       .story__quote {
         font-family: 'Cormorant Garamond', Georgia, serif;
